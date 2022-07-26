@@ -77,7 +77,7 @@ const GraphAnswer2 = (props: GraphProps) => {
             // paintOrder:"stroke"
           }}
         />
-        <XAxis type="number" dataKey="count" domain={[0, (total[0].count * 10/7)]} />
+        <XAxis type="number" dataKey="count" domain={[0, Math.round(total[0].count * 10/7)]} />
       </BarChart>
     </ResponsiveContainer>
   );
