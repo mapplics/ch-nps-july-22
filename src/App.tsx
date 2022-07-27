@@ -86,6 +86,12 @@ const App = () => {
               </tr>
               <tr className="h-4"></tr>
               <tr className="text-gray-700">
+                <td className="py-px font-bold">Indicador NPS</td>
+                <td className="py-px px-2">{prom - det}</td>
+                <td></td>
+              </tr>
+              <tr className="h-4"></tr>
+              <tr className="text-gray-700">
                 <td className="py-px font-bold">Promedio</td>
                 <td className="py-px px-2">{promedio.toFixed(2)}</td>
                 <td></td>
