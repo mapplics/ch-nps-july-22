@@ -17,6 +17,8 @@ const App = () => {
   const promedio =
     answered.reduce((prev: number, e) => prev + e.score!, 0) / resp;
 
+  const npsScore = ((prom - det) / resp) * 100;
+
   return (
     <div className="max-w-screen-md lg:max-w-screen-lg mx-auto bg-gray-50 p-3">
       <div className="w-full py-5 px-4 text-gray-700 relative">
@@ -86,8 +88,8 @@ const App = () => {
               </tr>
               <tr className="h-4"></tr>
               <tr className="text-gray-700">
-                <td className="py-px font-bold">Indicador NPS</td>
-                <td className="py-px px-2">{prom - det}</td>
+                <td className="py-px font-bold">Puntaje NPS</td>
+                <td className="py-px px-2">{npsScore.toFixed(1)}</td>
                 <td></td>
               </tr>
               <tr className="h-4"></tr>
